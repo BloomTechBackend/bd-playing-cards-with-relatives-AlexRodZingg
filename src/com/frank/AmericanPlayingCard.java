@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class AmericanPlayingCard extends PlayingCard{
+public class  AmericanPlayingCard extends PlayingCard{
 	// static means there only shared by all
 	// final means cannot be changed once it has been assigned a value
 	// static final means only one occurrence, shared by all, that can't be changed
@@ -29,12 +29,20 @@ public class AmericanPlayingCard extends PlayingCard{
 	{
 	// super class ctor requires (int, String, String) parameters
 	// so we need to convert enums when using them as arguments to the super class ctor
+	// .ordinal() enum method provides the integer represented by the enum
+	// .toString() enum method provides the enum as a String
 		super(DEFAULTCARDVALUE.ordinal(), DEFAULTSUIT.toString(), DEFAULTCOLOR.toString());
 	} 
 
+	// 2-arg ctor (constructor) taking a CardValue and CardSuit as parameters
 	public AmericanPlayingCard(CardValue value, CardSuit suit) {
         // super class ctor requires (int, String, String) parameters
 		// so we need to convert enums when using them as arguments to the super class ctor
+		// .ordinal() enum method provides the integer represented by the enum
+		// .toString() enum method provides the enum as a String
+		// Note: card color is determined by the CardSuit
+		// Conditional operator provides the ability to use a value based on a condition
+		// Conditional operator: 	condition ? value-if-true : value-if-false
 		super(value.ordinal(),               // Call super ctor with value passed
 			  suit.toString(),               // Call suoer ctor with suit passed
 			 (suit == CardSuit.CLUB || suit == CardSuit.SPADE) ? CardColor.BLACK.toString() : CardColor.RED.toString());
