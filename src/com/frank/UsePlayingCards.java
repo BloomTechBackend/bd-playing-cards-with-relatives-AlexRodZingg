@@ -24,9 +24,9 @@ public class UsePlayingCards {
 		//								if superclass does not have the method, Java continues up the inheritance tree
 		//								until it runs out of superclasses
 
-		ItalianPlayingCard italianPlayingCard = new ItalianPlayingCard(6, "Coins");
+		//ItalianPlayingCard italianPlayingCard = new ItalianPlayingCard(6, "Coins");
 		System.out.println("anItalianCard is: ");
-		italianPlayingCard.showCard(); // since there is a showCard() in ItalianPlayingCard class
+		// italianPlayingCard.showCard(); // since there is a showCard() in ItalianPlayingCard class
 										// 		Java is running the showCard() in the PlayingCard class
 
 	}  // End of main()

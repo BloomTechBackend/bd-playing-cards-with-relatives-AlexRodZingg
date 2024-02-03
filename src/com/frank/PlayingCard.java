@@ -1,6 +1,11 @@
 package com.frank;
 
-public class PlayingCard {
+// This class is abstract because it contains at least one abstract method
+//       and/or it is not meant to be instantiated
+//		it is just meant to be a super class
+// The concept of a generic PlayingCard cannot exist in this application
+// Can still define a reference of the generic card, just can't instantiate it without one of its subclasses. 
+public abstract class PlayingCard {
 	
 	private int value;    
 	private String color;    
@@ -77,7 +82,10 @@ public class PlayingCard {
 		return true;
 	}
 
-// super class is required to have any method where Polymorphism might be used - even if it doesn't need it
-public void showCard() {} // required for Polymorphism to work - even though it does nothing - we will address this tomorrow!
+// super class is required to have any method where Polymorphism might be used
+	// making this an abstract method indicates that any subclass must define it
+	// This class is saying, "if you want to be part of my family, you must implement this behavior"
+	// 	I don't know exactly how this is done, but the subclass needs to figure it out
+public abstract void showCard(); // required for Polymorphism to work
 
 } // End of PlayingCard class
